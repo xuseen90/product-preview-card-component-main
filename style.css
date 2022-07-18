@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap');
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --hoverComponent: hsl(157.1, 36%, 18%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: 100%;
+}
+.card {
+  min-width: 600px;
+  width: 30%;
+  background-color: var(--White);
+  margin: 0 auto;
+  display: flex;
+  border-radius: 10px;
+}
+.left-card {
+  width: 50%;
+  background-image: url(images/image-product-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.right-card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 35px 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.item-Preview {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--DarkGrayishBlue);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.title {
+  font-size: 38px;
+  color: var(--VeryDarkBlue);
+}
+
+.item-description {
+  width: 85%;
+  color: var(--DarkGrayishBlue);
+  line-height: 1.5;
+  font-size: 14px;
+}
+.price {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.lower-price {
+  font-size: 36px;
+  color: var(--DarkCyan);
+  font-family: 'Fraunces', serif;
+}
+.upper-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: var(--DarkGrayishBlue);
+}
+button {
+  width: 100%;
+  padding: 17px 0;
+  background-color: var(--DarkCyan);
+  color: var(--White);
+  border: none;
+  font-size: 18px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--hoverComponent);
+}
+button img {
+  margin-right: 7px;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 780px) {
+  .card {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 641px) {
+  .card {
+    min-width: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  .left-card {
+    width: 100%;
+    height: 350px;
+    background-image: url(./images/image-product-mobile.jpg);
+    border-radius: 10px 10px 0 0;
+  }
+  .right-card {
+    width: 100%;
+    row-gap: 12px;
+    padding: 25px;
+    border-bottom: 0 0 10px 10px;
+  }
+  .item-Preview {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .item-description {
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    font-size: 12px;
+  }
+  button {
+    margin-top: 10px;
+  }
+}
